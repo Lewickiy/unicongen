@@ -16,6 +16,6 @@ public class ExposedClass {
 
     @Override
     public String toString() {
-        return clazz.getName() + "#" + method.getName() + " -> " + exposureType;
+        return clazz.getName() + "#" + method.getName() + " > " + exposureType;
     }
 }
