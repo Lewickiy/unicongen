@@ -6,6 +6,9 @@ import ru.levitsky.unicongen.core.enumeration.ExposureType;
 
 import java.lang.reflect.Method;
 
+/**
+ * Test doc
+ */
 @AllArgsConstructor
 @Getter
 public class ExposedClass {
