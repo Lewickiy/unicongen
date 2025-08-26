@@ -7,7 +7,7 @@ plugins {
 
 group = 'ru.levitsky'
 version = '0.0.1-SNAPSHOT'
-description = 'unicongen'
+description = 'demoapp'
 
 java {
     toolchain {
@@ -30,6 +30,10 @@ ext {
 }
 
 dependencies {
+    implementation project(':core')         // ядро
+    implementation project(':api-rest')     // REST адаптер
+    implementation project(':api-grpc')     // gRPC адаптер
+
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-graphql'
     implementation 'org.springframework.boot:spring-boot-starter-web'

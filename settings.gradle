@@ -1,1 +1,3 @@
 rootProject.name = 'unicongen'
+
+include 'core', 'api-rest', 'api-grpc', 'demo-app'
