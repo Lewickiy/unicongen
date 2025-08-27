@@ -1,11 +1,14 @@
 package ru.levitsky.unicongen.core.annotation;
 
+import ru.levitsky.unicongen.core.enumeration.GraphQLOperationType;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-public @interface ExposedService {
+@Target(ElementType.METHOD)
+public @interface GraphQLType {
+    GraphQLOperationType value();
 }
