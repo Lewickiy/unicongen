@@ -4,12 +4,19 @@ import ru.levitsky.unicongen.core.annotation.ExposeAs;
 import ru.levitsky.unicongen.core.annotation.ExposedService;
 import ru.levitsky.unicongen.core.annotation.GraphQLType;
 import ru.levitsky.unicongen.core.annotation.KafkaType;
+import ru.levitsky.unicongen.core.annotation.RestApiRoot;
 import ru.levitsky.unicongen.core.annotation.RestType;
 import ru.levitsky.unicongen.core.enumeration.GraphQLOperationType;
 import ru.levitsky.unicongen.core.enumeration.KafkaOperatorType;
 import ru.levitsky.unicongen.core.enumeration.RestOperationType;
 
-@ExposedService
+@ExposedService(
+        restApiRoot = @RestApiRoot(
+                basePath = "/greeting",
+                description = "Operations with greeting",
+                version = "v2",
+                outputDir = "src/generated/restcontroller")
+)
 public class GreetingService {
 
     @ExposeAs(rest = @RestType(value = RestOperationType.GET, path = "/getByName"))
