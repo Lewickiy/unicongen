@@ -30,9 +30,9 @@ ext {
 }
 
 dependencies {
-    implementation project(':core')         // ядро
-    implementation project(':api-rest')     // REST адаптер
-    implementation project(':api-grpc')     // gRPC адаптер
+    implementation project(':core')
+    implementation project(':api-rest')
+    implementation project(':api-grpc')
 
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-graphql'
