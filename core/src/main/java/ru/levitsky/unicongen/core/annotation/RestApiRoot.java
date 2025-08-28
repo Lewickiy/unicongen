@@ -8,9 +8,9 @@ import java.lang.annotation.Target;
 /**
  * Annotation for specifying the base REST API configuration at the service class level.
  * <p>
- * Used together with {@link ru.levitsky.unicongen.core.annotation.ExposedService} and
- * {@link ru.levitsky.unicongen.core.annotation.ExposeAs} for generating
- * a RestController and corresponding endpoints.
+ * Designed to be used only inside {@link ru.levitsky.unicongen.core.annotation.ExposedService}.
+ * It provides the necessary configuration for generating RestController files
+ * for annotated service classes.
  * </p>
  *
  * <p>Available fields:</p>
@@ -37,7 +37,7 @@ import java.lang.annotation.Target;
  * }</pre>
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
+@Target(ElementType.ANNOTATION_TYPE)
 public @interface RestApiRoot {
 
     /**
