@@ -101,12 +101,12 @@ public class Demo {
 
 ### Example Console Output
 ```bash
-11:32:30 [main] INFO ru.levitsky.unicongen.core.Demo - Starting UniConGen Demo...
-11:32:30 [main] INFO ru.levitsky.unicongen.core.Demo - Exposed methods found:
+11:32:30 [main] INFO ru.levitsky.unicongen.core.demo.Demo - Starting UniConGen Demo...
+11:32:30 [main] INFO ru.levitsky.unicongen.core.demo.Demo - Exposed methods found:
 ExposedClass(technology=REST, operationType=POST, clazz=class GreetingService, method=helloPost)
 ExposedClass(technology=KAFKA, operationType=PRODUCER, clazz=class GreetingService, method=sendMessage)
 ...
-11:32:30 [main] INFO ru.levitsky.unicongen.core.Demo - Demo finished.
+11:32:30 [main] INFO ru.levitsky.unicongen.core.demo.Demo - Demo finished.
 ```
 
 ## Setup and Installation
