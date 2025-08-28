@@ -1,6 +1,8 @@
 package ru.levitsky.unicongen.core.scanner;
 
 import org.reflections.Reflections;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.levitsky.unicongen.core.annotation.ExposeAs;
 import ru.levitsky.unicongen.core.annotation.ExposedService;
 import ru.levitsky.unicongen.core.enumeration.GraphQLOperationType;
@@ -19,7 +21,13 @@ import static ru.levitsky.unicongen.core.enumeration.ExposureType.KAFKA;
 import static ru.levitsky.unicongen.core.enumeration.ExposureType.REST;
 
 public class ExposeScanner {
+
+    private static final Logger log = LoggerFactory.getLogger(ExposeScanner.class);
+
     public static Set<ExposedClass> scan(String basePackage) {
+
+        log.info("Scanning {}", basePackage);
+
         Reflections reflections = new Reflections(basePackage);
         Set<ExposedClass> exposedMethods = new HashSet<>();
 
