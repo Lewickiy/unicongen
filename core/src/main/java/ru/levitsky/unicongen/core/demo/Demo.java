@@ -1,4 +1,4 @@
-package ru.levitsky.unicongen.core;
+package ru.levitsky.unicongen.core.demo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
