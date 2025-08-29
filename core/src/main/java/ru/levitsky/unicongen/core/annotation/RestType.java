@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
  * path = "String", в случае если её значение дополняет
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
+@Target(ElementType.ANNOTATION_TYPE)
 public @interface RestType {
     RestOperationType value();
     String path() default "";
