@@ -40,9 +40,10 @@ unicongen/
 
 ## Example of an Annotated Service (current implementation)
 ```java
-@ExposedService
-@RestApiRoot(basePath = "/greeting")
-@GrpcApiRoot(serviceName = "GreetingService", packageName = "ru.levitsky.grpc")
+@ExposedService(
+        restApiRoot = @RestApiRoot(basePath = "/greeting"),
+        grpcApiRoot = @GrpcApiRoot(serviceName = "GreetingService", packageName = "ru.levitsky.grpc")
+)
 public class GreetingService {
 
     @ExposeAs(rest = @RestType(RestOperationType.GET))
