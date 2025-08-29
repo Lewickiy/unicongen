@@ -74,7 +74,18 @@ Following these standards ensures consistency, readability, and ease of contribu
   - Reference related issue(s)
   - Follow commit message conventions
   - Include description of changes and impact
-## 5. Commit Message Guidelines
+## 5. Commit Workflow
+**1.Branching:**
+- Each feature, fix, or task should be done in its own branch.
+- Branch names should be descriptive, e.g., feature/rest-api-root, fix/logger-issue.
+
+**2. Pull Requests:**
+- All branches are merged into the development branch via Pull Requests (PRs).
+- Direct commits to development are discouraged; use PRs for code review and discussion.
+
+**3. Commit Message Guidelines**
+
+We follow **Conventional Commits** with some customization for this project.
 - **Use imperative mood:** `Add`, `Fix`, `Update`, `Refactor`, `Docs`.
 - **Structure:**
     ```text
@@ -88,6 +99,8 @@ Following these standards ensures consistency, readability, and ease of contribu
     feat(core): implement Annotation Processor prototype
     refactor(core): replace runtime Scanner with modular API
     ```
+This workflow keeps the repository organized, ensures **traceability**, and maintains a **clean development history**.    
+
 ## 6. Contribution
 - Contributions are welcome: bug fixes, enhancements, or documentation improvements.
 - Open issues or submit pull requests.
