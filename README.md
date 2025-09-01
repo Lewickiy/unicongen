@@ -122,7 +122,12 @@ dependencies {
 The project is licensed under the MIT License – see [LICENSE](https://github.com/Lewickiy/unicongen/tree/main?tab=MIT-1-ov-file)
 
 ## Contribution
-Contributions are welcome! Please open `issues` or `pull requests` for bug fixes, improvements, or feature proposals
+- Contributions are welcome: bug fixes, enhancements, or documentation improvements.
+- Open issues or submit pull requests.
+- Always follow the documentation standards described here.
+
+Please note that this project is released with a [Code of Conduct](CODE_OF_CONDUCT.md).  
+By participating in this project you agree to abide by its terms.
 
 ## Roadmap
 - Full **REST API** generation (`api-rest`)
