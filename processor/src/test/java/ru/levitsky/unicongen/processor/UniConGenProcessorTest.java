@@ -17,7 +17,7 @@ public class UniConGenProcessorTest {
                 "test.Hello",
                 "package test;",
                 "import javax.annotation.processing.*;",
-                "public class Hello {}"
+                "public class TestUniConGenProcessor {}"
         );
 
         Compilation compilation = Compiler.javac()

@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'jacoco'
 }
 
 group = 'ru.levitsky'
@@ -27,9 +28,35 @@ dependencies {
     implementation 'com.squareup:javapoet:1.13.0'
 
     testImplementation 'com.google.testing.compile:compile-testing:0.21.0'
-    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+}
+
+jacoco {
+    toolVersion = "0.8.11"
 }
 
 test {
     useJUnitPlatform()
+    finalizedBy tasks.jacocoTestReport, tasks.jacocoTestCoverageVerification
+}
+
+tasks.jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+        csv.required.set(false)
+    }
+}
+
+tasks.jacocoTestCoverageVerification {
+    dependsOn test
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.0
+            }
+        }
+    }
 }
